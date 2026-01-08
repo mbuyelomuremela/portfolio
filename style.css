@@ -192,4 +192,22 @@ footer {
     color: #00adb5;
 }
 
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.project-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    color: #00adb5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
