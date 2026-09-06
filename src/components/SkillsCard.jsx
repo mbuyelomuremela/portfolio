@@ -4,7 +4,7 @@ function SkillsCard({ skillData }) {
       <h3 className="text-center mb-1">{skillData.title}</h3>
       <ul className="flex flex-col gap-1 items-center">
         {skillData.skills.map((skill) => (
-          <li>{skill}</li>
+          <li key={skill}>{skill}</li>
         ))}
       </ul>
     </div>
