@@ -48,7 +48,7 @@ function NavBar() {
       </nav>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <ul className="flex flex-col gap-10 items-center md:hidden dark:text-white/50">
+        <ul className="flex flex-col gap-10 items-center md:hidden bg-gray-200 dark:bg-gray-950 dark:text-white/50 pb-2">
           <li>
             <Link to={"/"} onClick={toggleMobileMenu}>
               Home
