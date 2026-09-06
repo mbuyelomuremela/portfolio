@@ -4,12 +4,13 @@ import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import ProjectsLayout from "@/layouts/ProjectsLayout";
 import { projects as projectData } from "@/data/projects";
+import { skillCategories } from "@/data/skills";
 
 function HomePageLayout() {
   return (
     <>
       <Hero />
-      <Skills />
+      <Skills skills={skillCategories} />
       <ProjectsLayout projects={projectData} />
       <About />
       <Contact />
