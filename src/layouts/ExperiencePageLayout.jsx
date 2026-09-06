@@ -1,7 +1,7 @@
 function ExperiencePageLayout() {
   return (
     <>
-      <h2>Experience Page Components</h2>
+      <h2 className="text-center">Experience Page Components</h2>
     </>
   );
 }

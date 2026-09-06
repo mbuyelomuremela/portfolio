@@ -1,7 +1,7 @@
 function EducationPageLayout() {
   return (
     <>
-      <h2>Education Page Components</h2>
+      <h2 className="text-center">Education Page Components</h2>
     </>
   );
 }
