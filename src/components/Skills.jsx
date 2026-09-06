@@ -10,7 +10,7 @@ function Skills({ skills }) {
       <p className="text-center">Technologies and Tools</p>
       <div className="grid md:grid-cols-2 gap-1 justify-items-center mt-4">
         {skills.map((skill) => (
-          <SkillsCard skillData={skill} />
+          <SkillsCard key={skill.id} skillData={skill} />
         ))}
       </div>
     </div>
