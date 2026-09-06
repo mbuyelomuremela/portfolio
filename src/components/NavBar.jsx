@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaBars, FaMoon, FaSun } from "react-icons/fa6";
+import { FaBars, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
 import { useState, useContext } from "react";
 import { themeContext } from "@/context/ThemeContext";
 
@@ -17,12 +17,12 @@ function NavBar() {
 
   return (
     <>
-      <nav className="flex justify-between items-center">
-        <a href="#">
-          Mbuyelo <span>Muremela</span>
+      <nav className="flex justify-between items-center py-4 px-6 max-w-[1200px] mx-auto h-full">
+        <a href="#" className="text-xl md:text-lg font-bold">
+          Mbuyelo <span className="text-blue-600">Muremela</span>
         </a>
         {/* Desktop Menu */}
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex gap-10 items-center dark:text-white/50">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -34,29 +34,43 @@ function NavBar() {
           </li>
           <li>
             <Link to={"#"} onClick={toggleTheme}>
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
+              {theme === "dark" ? (
+                <FaSun className="text-yellow-400" />
+              ) : (
+                <FaMoon className="text-slate-900" />
+              )}
             </Link>
           </li>
         </ul>
-        <div className="block md:hidden">
-          <FaBars onClick={toggleMobileMenu} />
+        <div className="block md:hidden text-lg" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaXmark /> : <FaBars />}
         </div>
       </nav>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <ul className="flex flex-col gap-1 items-center md:hidden">
+        <ul className="flex flex-col gap-10 items-center md:hidden dark:text-white/50">
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"} onClick={toggleMobileMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/education"}>Education</Link>
+            <Link to={"/education"} onClick={toggleMobileMenu}>
+              Education
+            </Link>
           </li>
           <li>
-            <Link to={"/experience"}>Experience</Link>
+            <Link to={"/experience"} onClick={toggleMobileMenu}>
+              Experience
+            </Link>
           </li>
           <li>
             <Link to={"#"} onClick={toggleTheme}>
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
+              {theme === "dark" ? (
+                <FaSun className="text-yellow-400" onClick={toggleMobileMenu} />
+              ) : (
+                <FaMoon className="text-slate-900" onClick={toggleMobileMenu} />
+              )}
             </Link>
           </li>
         </ul>
