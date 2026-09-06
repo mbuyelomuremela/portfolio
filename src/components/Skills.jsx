@@ -3,7 +3,7 @@ import SkillsCard from "@/components/SkillsCard";
 function Skills({ skills }) {
   return (
     <div
-      id="#skills"
+      id="skills"
       className="flex flex-col gap-1 w-full px-6 py-4 md:max-w-[1100px] mx-auto my-15"
     >
       <h2 className="text-center">My Skills</h2>

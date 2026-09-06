@@ -34,19 +34,19 @@ function Hero() {
         <div className="grid grid-cols-2 gap-1 justify-items-center md:grid-cols-4 px-6 py-4 mt-6">
           <div className="flex flex-col gap-1 items-center m-6">
             <FaUser />
-            <Link to={"#about"}>About me</Link>
+            <a href="#about">About me</a>
           </div>
           <div className="flex flex-col gap-1 items-center m-6">
             <FaCode />
-            <Link to={"#skills"}>Skills</Link>
+            <a href="#skills">Skills</a>
           </div>
           <div className="flex flex-col gap-1 items-center m-6">
             <FaBriefcase />
-            <Link to={"#projects"}>See my work</Link>
+            <a href="#projects">See my work</a>
           </div>
           <div className="flex flex-col gap-1 items-center m-6">
             <FaPhone />
-            <Link to={"#contact"}>Contact me</Link>
+            <a href="#contact">Contact me</a>
           </div>
         </div>
         <div className="flex flex-col gap-1 items-center md:flex-row md:justify-center px-4 py-6 mt-6">
