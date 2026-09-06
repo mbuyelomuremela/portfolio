@@ -1,7 +1,7 @@
 function ProjectCard({ project }) {
   return (
     <div className="flex flex-col gap-1 m-6 w-[300px] rounded-lg shadow-lg shadow-gray-400 dark:shadow-gray-100 overflow-hidden">
-      <div className="w-full h-[300px] overflow-hidden">
+      <div className="w-full h-auto overflow-hidden">
         <img
           src={project.imageURL}
           alt="project image"
